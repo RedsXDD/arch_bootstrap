@@ -109,6 +109,7 @@ rofi-lbonn-wayland-git
 rofimoji
 shellcheck
 smartmontools
+starship
 stow
 stylua
 swaylock-effects

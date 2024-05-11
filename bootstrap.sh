@@ -175,9 +175,6 @@ gen_part2(){
 	rm -rf "\$tmp_paru"
 	list_file="/home/Reds/.local/bin/not_path/post-install/arch/pkgs"
 	sed '/^#/d; s/#.*//g; /^$/d' < "\$list_file" | xargs -ro paru --needed -S
-
-	# Starship Prompt:
-	curl -fsSL https://starship.rs/install.sh | sh
 	GENPART2_EOF
 }
 part2_script_path="$(mktemp)"
