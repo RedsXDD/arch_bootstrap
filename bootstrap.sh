@@ -178,9 +178,6 @@ gen_part2(){
 
 	# Starship Prompt:
 	curl -fsSL https://starship.rs/install.sh | sh
-
-	# Ollama:
-	curl -fsSL https://ollama.com/install.sh | sh
 	GENPART2_EOF
 }
 part2_script_path="$(mktemp)"
