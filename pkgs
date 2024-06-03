@@ -4,11 +4,12 @@ base
 base-devel
 bat
 bc
+blesh-git
 brave-bin
 breeze-gtk
 breeze5
 btop
-cava
+cava-git
 chaotic-keyring
 chaotic-mirrorlist
 cliphist
@@ -22,6 +23,7 @@ figlet
 fzf
 gammastep
 gegl
+gimp
 git
 git-delta
 glow
@@ -34,8 +36,6 @@ hyprlock
 hyprpicker
 intel-ucode
 keepassxc
-kitty
-kvantum
 lazygit
 libnotify
 librewolf
@@ -87,12 +87,16 @@ themix-full-git
 tlrc
 transmission-cli
 tree-sitter-git
+otf-firamono-nerd
+ttf-firacode-nerd
 ttf-jetbrains-mono-nerd
 ttf-symbola
+ttf-ubuntu-mono-nerd
+ttf-ubuntu-nerd
 unarchiver
-wallust-git
 waybar
 webcord
+wezterm-git
 wget
 wireplumber
 wtype
@@ -100,6 +104,7 @@ xdg-desktop-portal
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 yazi
+yq
 yt-dlp
 zathura
 zathura-djvu
