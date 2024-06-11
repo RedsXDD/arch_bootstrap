@@ -4,7 +4,6 @@ base
 base-devel
 bat
 bc
-blesh-git
 brave-bin
 breeze-gtk
 breeze5
@@ -61,6 +60,7 @@ nwg-look
 oomox-qt5-styleplugin-git
 oomox-qt6-styleplugin-git
 opendoas
+otf-firamono-nerd
 ouch
 p7zip
 paru
@@ -74,7 +74,8 @@ rar
 reflector
 ripgrep
 rofi-lbonn-wayland-git
-rofimoji
+rofi-emoji-git
+rofi-calc-git
 rust
 shellcheck
 starship
@@ -87,7 +88,6 @@ themix-full-git
 tlrc
 transmission-cli
 tree-sitter-git
-otf-firamono-nerd
 ttf-firacode-nerd
 ttf-jetbrains-mono-nerd
 ttf-symbola
