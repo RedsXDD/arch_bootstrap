@@ -161,28 +161,6 @@ echo 'permit nopass root as root' | sudo tee -a /etc/doas.conf >/dev/null 2>&1
 sudo chown -c root:root /etc/doas.conf
 sudo chmod -c 0400 /etc/doas.conf
 #: }}}
-#: Generate/execute part two of script {{{
-gen_part2(){
-	cat <<- GENPART2_EOF
-	#!/usr/bin/env sh
-
-	# Install Paru & install packages:
-	tmp_paru="\$(mktemp -d)"
-	trap 'rm -rf "\$tmp_paru"' 0 1 9 15
-	git clone https://aur.archlinux.org/paru.git "\$tmp_paru"/paru
-	cd "\$tmp_paru"/paru
-	sudo makepkg --noconfirm -si
-	rm -rf "\$tmp_paru"
-	list_file="/home/Reds/.local/bin/not_path/post-install/arch/pkgs"
-	sed '/^#/d; s/#.*//g; /^$/d' < "\$list_file" | xargs -ro paru --needed -S
-	GENPART2_EOF
-}
-part2_script_path="$(mktemp)"
-gen_part2 > "$part2_script_path"
-chmod u+x "$part2_script_path"
-sudo chown Reds:Reds "$part2_script_path"
-su -c "$part2_script_path" -s /bin/sh Reds
-#: }}}
 #: Fix sudo/doas permissions {{{
 echo 'permit persist :wheel' | sudo tee /etc/doas.conf >/dev/null 2>&1
 sed 's/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/g; s/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers > "$tmp_sudoers"
